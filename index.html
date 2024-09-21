@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Weather.app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "PT Sans", sans-serif;
+            background: url(/assets/cloudy.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+            border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0),#000000ce);
+        }
+        .brand h3{
+            font-weight: bolder;
+            margin-left: 50px;
+        }
+        @media screen and (max-width:800px){
+            .brand h3{
+                margin-left: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="brand text-light mt-3"><h3>weather.app</h3></div>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="city-name" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button onclick="searchTemperature()" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center">
+            <img id="image-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city">Kochi</h1>
+            <h3><span id="temp">38.06</span>&deg;C</h3>
+            <h1 class="lead" id="weather">Clouds</h1>
+        </div>
+    </div>
+<script src="/assets/script.js "></script>
+</body>
+
+</html>
